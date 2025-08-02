@@ -1,0 +1,27 @@
+<%- include("includes/head.ejs") %>
+    <h1 class="text-primary">CREATE NEW USER</h1>
+    <form method="POST" action="/user">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Id</label>
+            <input name="id" class="form-control" value="<%= uuidv4() %>" required />
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="exampleInputPassword1">Name </label>
+            <input name="name" class="form-control" placeholder="name" required />
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input name="password" type="password" class="form-control" placeholder="Password" required />
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input name="email" type="email" class="form-control" placeholder="Enter email" required />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <%- include("includes/footer.ejs") %>

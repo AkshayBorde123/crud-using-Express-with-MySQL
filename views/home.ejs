@@ -1,0 +1,10 @@
+<%- include("includes/head.ejs") %>
+
+<h1 class="text-primary">
+  Total  User is in Stud Tables is = <%= total['count(*)'] %>
+</h1>
+<form action="/user" method="get">
+  <button class="btn btn-outline-primary">See All User</button>
+</form>
+
+<%- include("includes/footer.ejs") %>

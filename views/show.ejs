@@ -1,0 +1,50 @@
+<%- include("includes/head.ejs") %>
+
+  <h1 class="text-primary">SEE ALL USERS</h1>
+  <form action="/user/new" method="get">
+    <button class="btn btn-outline-primary">CREATE NEW USER</button>
+  </form>
+  <br />
+  <div class="table-container table-responsive">
+    <table class="table table-bordered table-striped table-hover align-middle">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>PASSWORD</th>
+          <th>EMAIl</th>
+          <th colspan="2">ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(user of users ) { %>
+          <tr>
+            <td>
+              <%= user.id %>
+            </td>
+            <td>
+              <%= user.name %>
+            </td>
+            <td>
+              <%= user.password %>
+            </td>
+            <td>
+              <%= user.email %>
+            </td>
+            <td>
+              <form method="get" action="/user/<%= user.id %>/edit">
+                <button class="btn btn-warning">Edit</button>
+              </form>
+            </td>
+            <td>
+              <form method="get" action="/user/<%= user.id %>/delete">
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </div>
+
+  <%- include("includes/footer.ejs") %>

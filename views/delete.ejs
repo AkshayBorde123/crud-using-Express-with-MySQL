@@ -1,0 +1,16 @@
+<%- include("includes/head.ejs") %>
+
+    <h1 class="text-danger">DELETE User</h1>
+    <h2>id = <%= user.id %>
+    </h2>
+    <h3>name = <%= user.name %>
+    </h3>
+    <form action="/user/<%= user.id %>?_method=DELETE" method="post">
+        email is :- <input type="text" name="email" value="<%= user.email %>" /><br />
+        <br />
+        Password is:-
+        <input type="text" name="password" required /><br /><br />
+        <button class="btn btn-primary">Submit</button>
+    </form>
+
+    <%- include("includes/footer.ejs") %>

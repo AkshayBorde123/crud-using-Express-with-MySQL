@@ -1,0 +1,14 @@
+<%- include("includes/head.ejs") %>
+
+<h1 class="text-primary">Edit Details of User</h1>
+<h2>id = <%= user.id %></h2>
+<h3>email = <%= user.email %></h3>
+<form action="/user/<%= user.id %>?_method=PATCH" method="post">
+  name is :- <input type="text" name="name" value="<%= user.name %>" /><br />
+  <br />
+  Password is:-
+  <input type="text" name="password" required /><br /><br />
+  <button class="btn btn-primary">Submit</button>
+</form>
+
+<%- include("includes/footer.ejs") %>

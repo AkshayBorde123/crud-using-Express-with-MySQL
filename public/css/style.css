@@ -1,0 +1,26 @@
+.post {
+    background-color: wheat;
+}
+
+  body {
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      table th,
+      table td {
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap; /* Prevent text wrapping */
+      }
+
+      @media (max-width: 576px) {
+        .table-container {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
